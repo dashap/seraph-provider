@@ -1,9 +1,22 @@
 seraph-provider
 ===============
 
-Jira SSO Authenticator - works with Jira 6.x 
+Jira SSO Authenticator using Apache and not using cookie elements in the authenticator to allow Apache to deal with it instead - works with Jira 6.x 
 
-We use Apache as a ajp/proxy that was setup for sso and mod_ajp, so our url to Jira arrives from the Apache server with the remote user/principal.
+We use Apache as a ajp/proxy that was setup for sso and mod_ajp, so our url to Jira arrives from the Apache server with the remote user/principal.  In apache we excluded jira from basic authentication via a LocationMatch check and added following stanza that proxies over to the Jira server:
+
+ #JIRA AJP Proxy config
+  ProxyPreserveHost On
+  <Location /apps/jira>
+    Satisfy Any
+    Allow from all
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} !yourapacheserver.com
+    RewriteRule (.*) http://yourapacheserver.com%{REQUEST_URI} [R=307]
+    ProxyPass ajp://yourjiraserver.com:8009/apps/jira                   # in server.xml we set path="/apps/jira"
+    ProxyPassReverse ajp://yourjiraserver.com:8009/apps/jira
+  </Location>
+
 In the Jira server.xml we uncommented the ajp section.  
 
 Added to ajp connector in server.xml: 
