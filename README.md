@@ -21,14 +21,14 @@ Examples:
 
 <pre>
 &lt;param-name&gt;login.url&lt;/param-name&gt;
-\<param-value>https://swwlogin.sas.com/opensso/UI/Login?realm=/sww&amp;goto=${originalurl};\</param-value>
+&lt;param-value&gt;https://swwlogin.sas.com/opensso/UI/Login?realm=/sww&amp;goto=${originalurl};&lt;/param-value&gt;
 
 # Hint: use \&amp; instead of &...
-\<param-name>link.login.url\</param-name>
-\<param-value>https://swwlogin.sas.com/opensso/UI/Login?realm=/sww&amp;goto=${originalurl};\</param-value>
+&lt;param-name&gt;link.login.url&lt;/param-name&gt;
+&lt;param-value&gt;https://swwlogin.sas.com/opensso/UI/Login?realm=/sww&amp;goto=${originalurl};&lt;/param-value&gt;
 
-\<param-name>logout.url\</param-name>
-\<param-value>http://sww.sas.com/logout\</param-value>
+&lt;param-name&gt;logout.url&lt;/param-name&gt;
+&lt;param-value&gt;http://sww.sas.com/logout&lt;/param-value&gt;
 </pre>
 
 The only issue I see so far is I do not get prompted to go into Administrator mode anymore. I went back to the old way of having a
