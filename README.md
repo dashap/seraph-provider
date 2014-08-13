@@ -5,9 +5,10 @@ Jira SSO Authenticator using Apache and not using cookie elements in the authent
 
 We use Apache as a ajp/proxy that was setup for sso and mod_ajp, so our url to Jira arrives from the Apache server with the remote user/principal.  In apache we excluded jira from basic authentication via a LocationMatch check and added following stanza that proxies over to the Jira server:
 
+<pre>
  #JIRA AJP Proxy config
   ProxyPreserveHost On
-  <Location /apps/jira>
+  &lt;Location /apps/jira&gt;
     Satisfy Any
     Allow from all
     RewriteEngine On
@@ -15,7 +16,8 @@ We use Apache as a ajp/proxy that was setup for sso and mod_ajp, so our url to J
     RewriteRule (.*) http://yourapacheserver.com%{REQUEST_URI} [R=307]
     ProxyPass ajp://yourjiraserver.com:8009/apps/jira                   # in server.xml we set path="/apps/jira"
     ProxyPassReverse ajp://yourjiraserver.com:8009/apps/jira
-  </Location>
+  &lt;/Location&gt;
+</pre>
 
 In the Jira server.xml we uncommented the ajp section.  
 
