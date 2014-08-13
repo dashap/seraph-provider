@@ -36,14 +36,14 @@ Examples:
 
 <pre>
 &lt;param-name&gt;login.url&lt;/param-name&gt;
-&lt;param-value&gt;https://swwlogin.sas.com/opensso/UI/Login?realm=/sww&amp;goto=${originalurl};&lt;/param-value&gt;
+&lt;param-value&gt;https://youropenamserver.com/opensso/UI/Login?realm=/sww&amp;goto=${originalurl};&lt;/param-value&gt;
 
 # Hint: we had to use \&amp; instead of & with goto= since xml does not like ampersands...
 &lt;param-name&gt;link.login.url&lt;/param-name&gt;
-&lt;param-value&gt;https://swwlogin.sas.com/opensso/UI/Login?realm=/sww&amp;goto=${originalurl};&lt;/param-value&gt;
+&lt;param-value&gt;https://youropenamserver.com/opensso/UI/Login?realm=/sww&amp;goto=${originalurl};&lt;/param-value&gt;
 
 &lt;param-name&gt;logout.url&lt;/param-name&gt;
-&lt;param-value&gt;http://sww.sas.com/logout&lt;/param-value&gt;
+&lt;param-value&gt;http://youropenamserver.com/logout&lt;/param-value&gt;
 </pre>
 
 <h2>Known Issues</h2>
