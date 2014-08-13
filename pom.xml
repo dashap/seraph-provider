@@ -49,7 +49,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>com.sun.identity.provider.seraph.OpenSsoJiraAuthenticator</mainClass>
+                            <mainClass>com.sas.mis.des.seraph.SSOAuthenticator</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
