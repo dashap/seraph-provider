@@ -46,5 +46,9 @@ Examples:
 &lt;param-value&gt;http://sww.sas.com/logout&lt;/param-value&gt;
 </pre>
 
+<h2>Known Issues</h2>
 The only issue I see so far is I do not get prompted to go into Administrator mode anymore. I went back to the old way of having a
 non-Administrator login for the times I need to work as a regular user.
+
+<h2>Logging</h2>Added to Jira's WEB-INF/classes/log4j.properties: log4j.logger.com.sas.mis.des.seraph.SSOAuthenticator = INFO, console, filelog log4j.additivity.com.sas.mis.des.seraph.SSOAuthenticator = false
+
