@@ -20,7 +20,7 @@ Added our URLs for login.url, logout.url, and link.url that were provided by our
 Examples:
 
 <pre>
-\<param-name>login.url\</param-name>
+&gt;param-name>login.url\</param-name>
 \<param-value>https://swwlogin.sas.com/opensso/UI/Login?realm=/sww&amp;goto=${originalurl};\</param-value>
 
 # Hint: use \&amp; instead of &...
