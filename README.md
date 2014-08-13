@@ -19,15 +19,17 @@ Added our URLs for login.url, logout.url, and link.url that were provided by our
 
 Examples:
 
+<code>
 <param-name>login.url</param-name>
 <param-value>https://swwlogin.sas.com/opensso/UI/Login?realm=/sww&amp;goto=${originalurl};</param-value>
 
-# Hint: use &amp; instead of &...
+# Hint: use \&amp; instead of &...
 <param-name>link.login.url</param-name>
 <param-value>https://swwlogin.sas.com/opensso/UI/Login?realm=/sww&amp;goto=${originalurl};</param-value>
 
 <param-name>logout.url</param-name>
 <param-value>http://sww.sas.com/logout</param-value>
+</code>
 
 The only issue I see so far is I do not get prompted to go into Administrator mode anymore. I went back to the old way of having a
 non-Administrator login for the times I need to work as a regular user.
